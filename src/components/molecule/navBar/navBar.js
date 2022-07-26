@@ -1,6 +1,12 @@
 import React from "react";
-import { StyledNavBar } from "./navBar.styles";
+import { Logo } from "../../icons/logo/logo";
+import { AsideButtons, StyledNavBar } from "./navBar.styles";
 
 export const NavBar = ({ children }) => {
-  return <StyledNavBar></StyledNavBar>;
+  return (
+    <StyledNavBar>
+      <Logo />
+      <AsideButtons>{children}</AsideButtons>
+    </StyledNavBar>
+  );
 };

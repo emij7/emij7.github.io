@@ -1,10 +1,13 @@
 import styled from "styled-components";
 
 export const StyledNavBar = styled.nav`
-  background-color: ${(props) => props.theme.color.primary.normal};
-  border-radius: 50%;
-  border: 0.5rem outset ${(props) => props.theme.color.primary.normal};
-  height: 3rem;
-  padding: 0.5rem;
-  width: 3rem;
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+`;
+
+export const AsideButtons = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 `;

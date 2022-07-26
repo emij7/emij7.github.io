@@ -2,7 +2,12 @@ import { Button } from "../components/atoms/button/button";
 import { darkTheme, GlobalStyles, lightTheme } from "../styles/globals";
 import { ThemeProvider } from "styled-components";
 import React, { useState } from "react";
-// import { text } from "../text/text";
+import { NavBar } from "../components/molecule/navBar/navBar";
+import { Header } from "../components/molecule/header/header";
+import spainFlag from "../utils/spainFlag.png";
+import usaFlag from "../utils/usaFlag.png";
+import { Image } from "../components/atoms/image/image";
+import { Light } from "../components/icons/light/light";
 
 export const App = () => {
   const [themeState, setThemeState] = useState("dark");
@@ -16,9 +21,28 @@ export const App = () => {
   return (
     <ThemeProvider theme={themeState === "dark" ? darkTheme : lightTheme}>
       <GlobalStyles />
-      {/* <p>{text.title[language]}</p> */}
-      <Button onClick={themeToggler}>X</Button>
-      <Button onClick={languageToggler}>Lan</Button>
+      <NavBar>
+        <Button
+          onClick={themeToggler}
+          active={themeState === "dark" ? false : true}
+          margin={"0 0.5rem"}
+        >
+          <Light />
+        </Button>
+        <Button
+          onClick={languageToggler}
+          active={language === "es" ? true : false}
+        >
+          <Image src={spainFlag} alt="Spanish Flag" size={"1.5rem"} />
+        </Button>
+        <Button
+          onClick={languageToggler}
+          active={language === "en" ? true : false}
+        >
+          <Image src={usaFlag} alt="American Flag" size={"1.5rem"} />
+        </Button>
+      </NavBar>
+      <Header language={language} />
     </ThemeProvider>
   );
 };

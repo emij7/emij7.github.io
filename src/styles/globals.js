@@ -3,37 +3,27 @@ import { createGlobalStyle } from "styled-components";
 export const darkTheme = {
   color: {
     background: "#202020",
-    blue: "#42A5F5",
-    link: "#2962FF",
-    primary: {
-      dark: "#B62395",
-      light: "#F8EAF5",
-      normal: "#E52FBD",
-    },
-    secondary: {
-      dark: "#f9a825",
-      light: "#fffde7",
-      normal: "#ffee58",
-    },
     text: "#ffffff",
+    primary: "#ffffff",
+    secondary: "#4A4A4A",
+    tertiary: "#202020",
+    link: "#D5EFFC",
+    activeButton: "#2962FF",
+    gray: "#9B9B9B",
+    black: "#202020",
   },
 };
 export const lightTheme = {
   color: {
     background: "#FFFFFF",
-    blue: "#42A5F5",
-    link: "#2962FF",
-    primary: {
-      dark: "#B62395",
-      light: "#F8EAF5",
-      normal: "#ffee58",
-    },
-    secondary: {
-      dark: "#f9a825",
-      light: "#fffde7",
-      normal: "#ffee58",
-    },
     text: "#202020",
+    primary: "#202020",
+    secondary: "#429743",
+    tertiary: "#3C8841",
+    link: "#D5EFFC",
+    activeButton: "#2962FF",
+    gray: "#4A4A4A",
+    black: "#202020",
   },
 };
 export const GlobalStyles = createGlobalStyle`
