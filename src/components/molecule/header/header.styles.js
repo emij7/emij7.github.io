@@ -17,12 +17,12 @@ export const StyledTitle = styled.h1`
 `;
 export const StyledDecoration = styled.div`
   @media (max-width: 650px) {
-    border: 2px solid ${({ theme }) => theme.color.primary};
+    border: 2px solid ${({ theme }) => theme.color.text};
     width: 50%;
     margin: 0.1rem;
   }
   @media (min-width: 650px) {
-    border: 2px solid ${({ theme }) => theme.color.primary};
+    border: 2px solid ${({ theme }) => theme.color.text};
     margin: 0 1rem;
   }
 `;

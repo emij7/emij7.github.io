@@ -4,6 +4,7 @@ import { ThemeProvider } from "styled-components";
 import React, { useState } from "react";
 import { NavBar } from "../components/molecule/navBar/navBar";
 import { Header } from "../components/molecule/header/header";
+import { Projects } from "../components/molecule/projects/projects";
 import spainFlag from "../utils/spainFlag.png";
 import usaFlag from "../utils/usaFlag.png";
 import { Image } from "../components/atoms/image/image";
@@ -43,6 +44,7 @@ export const App = () => {
         </Button>
       </NavBar>
       <Header language={language} />
+      <Projects language={language} />
     </ThemeProvider>
   );
 };
