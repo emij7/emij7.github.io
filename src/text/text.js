@@ -1,3 +1,6 @@
+import heroAppImg from "../images/superApp.png";
+import horoscopeAppImg from "../images/horoscope.jpg";
+
 export const text = {
   title: {
     en: "Frontend Developer",
@@ -11,38 +14,28 @@ export const text = {
     {
       id: 1,
       title: {
-        en: "Project 1",
-        es: "Proyecto 1",
+        en: "Super-Hero APP",
+        es: "Super-Hero APP",
       },
       description: {
-        en: "Project 1 description",
-        es: "Descripción del proyecto 1",
+        en: "Find characters and create a customized team with heroes and villains",
+        es: "Busca personajes y crea tu equipo de heroes y villanos.",
       },
-      image: "https://picsum.photos/200/300",
+      image: heroAppImg,
+      link: "https://emij7.github.io/super-app/",
     },
     {
       id: 2,
       title: {
-        en: "Project 2",
-        es: "Proyecto 2",
+        en: "Horoscope app",
+        es: "App horóscopo",
       },
       description: {
-        en: "Project 2 description",
-        es: "Descripción del proyecto 2",
+        en: "Enter your birthdate to know your horoscope in different cultures.",
+        es: "Ingresa tu fecha de nacimiento para conocer cual es tu horóscopo en distintas culturas.",
       },
-      image: "https://picsum.photos/200/400",
-    },
-    {
-      id: 3,
-      title: {
-        en: "Project 3",
-        es: "Proyecto 3",
-      },
-      description: {
-        en: "Project 3 description",
-        es: "Descripción del proyecto 3",
-      },
-      image: "https://picsum.photos/200/200",
+      image: horoscopeAppImg,
+      link: "https://emij7.github.io/Horoscopos/",
     },
   ],
 };
