@@ -3,12 +3,14 @@ import { StyledProjects } from "./projects.styles";
 import { text } from "../../../text/text";
 import { Project } from "../../atoms/project/project";
 import { Button } from "../../atoms/button/button";
+import { Content } from "../../atoms/content/content";
 
 export const Projects = ({ language }) => {
   const [focused, setFocused] = useState(1);
   const [mount, setMount] = useState(true);
   const projectQuantity = text.projects.length;
   const plusFocused = () => {
+    //Change project focus (+1) with arrows
     setMount(false);
     setTimeout(() => {
       setMount(true);
@@ -20,6 +22,7 @@ export const Projects = ({ language }) => {
     }, 500);
   };
   const minusFocused = () => {
+    //Change project focus (-1) with arrows
     setMount(false);
     setTimeout(() => {
       setMount(true);
@@ -32,19 +35,22 @@ export const Projects = ({ language }) => {
   };
   return (
     <StyledProjects>
-      <Button tertiary={true} onClick={minusFocused} />
+      <Button tertiary onClick={minusFocused} />
       {text.projects.map((project, index) => {
         return focused === index + 1 ? (
           <Project
             mount={mount}
             key={index}
             title={project.title[language]}
-            description={project.description[language]}
+            description={project.description[language]} //Description not too big to secure responsive site.
             image={project.image}
+            link={project.link}
           />
-        ) : null;
+        ) : (
+          <Content height="400px"></Content>
+        );
       })}
-      <Button secondary={true} onClick={plusFocused} />
+      <Button secondary onClick={plusFocused} />
     </StyledProjects>
   );
 };
