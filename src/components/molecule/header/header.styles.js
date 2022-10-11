@@ -31,5 +31,5 @@ export const StyledDecoration = styled.div`
 export const StyledParagraph = styled.p`
   font-weight: 700;
   text-align: center;
-  padding: 2rem;
+  padding: 1rem;
 `;
