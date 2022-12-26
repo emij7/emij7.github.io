@@ -9,6 +9,7 @@ import spainFlag from "../utils/spainFlag.png";
 import usaFlag from "../utils/usaFlag.png";
 import { Image } from "../components/atoms/image/image";
 import { Light } from "../components/icons/light/light";
+import { Footer } from "../components/molecule/footer/footer";
 
 export const App = () => {
   const [themeState, setThemeState] = useState("dark");
@@ -46,6 +47,7 @@ export const App = () => {
       <Header language={language} />
 
       <Projects language={language} />
+      <Footer/>
     </ThemeProvider>
   );
 };
