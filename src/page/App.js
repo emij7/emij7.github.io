@@ -44,6 +44,7 @@ export const App = () => {
         </Button>
       </NavBar>
       <Header language={language} />
+
       <Projects language={language} />
     </ThemeProvider>
   );

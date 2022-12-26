@@ -1,10 +1,10 @@
 import React from "react";
 import { text } from "../../../text/text";
+import { StyledTitle } from "../../atoms/title/title.styles";
 import {
   StyledDecoration,
   StyledHeader,
   StyledParagraph,
-  StyledTitle,
 } from "./header.styles";
 
 export const Header = ({ language }) => {

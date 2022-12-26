@@ -11,11 +11,6 @@ export const StyledHeader = styled.div`
   }
 `;
 
-export const StyledTitle = styled.h1`
-  color: ${({ theme, type }) =>
-    type === "primary" ? theme.color.text : theme.color.secondary};
-  text-align: center;
-`;
 export const StyledDecoration = styled.div`
   @media (max-width: 650px) {
     border: 2px solid ${({ theme }) => theme.color.text};

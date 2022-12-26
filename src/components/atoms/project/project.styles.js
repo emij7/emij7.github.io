@@ -1,6 +1,8 @@
 import styled from "styled-components";
 
 export const StyledProject = styled.div`
+  border: 1px ${({ theme, type }) =>
+    type === "primary" ? theme.color.text : theme.color.secondary} solid;
   overflow: hidden;
   width: 75%;
   max-width: 600px;

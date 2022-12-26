@@ -6,6 +6,5 @@ export const StyledImage = styled.img`
 `;
 const projectImg = css`
   width: 100%;
-  border: 0.1rem solid ${({ theme }) => theme.color.primary};
   padding: 0.5rem;
 `;

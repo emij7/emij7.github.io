@@ -1,10 +1,8 @@
 import React from "react";
-import {
-  StyledParagraph,
-  StyledTitle,
-} from "../../molecule/header/header.styles";
+import { StyledParagraph } from "../../molecule/header/header.styles";
 import { Content } from "../content/content";
 import { Image } from "../image/image";
+import { StyledTitle } from "../title/title.styles";
 import { StyledProject } from "./project.styles";
 
 export const Project = ({ active, title, description, image, mount, link }) => {
