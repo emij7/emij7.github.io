@@ -35,6 +35,7 @@ export const GlobalStyles = createGlobalStyle`
     color: ${({ theme }) => theme.color.text};
     font-family: Tahoma, Helvetica, Arial, Roboto, sans-serif;
     transition: all 0.50s linear;
+    padding-bottom: 100px;
   }
 
   *,
