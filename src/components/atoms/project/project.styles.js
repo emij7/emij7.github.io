@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const StyledProject = styled.div`
-  border: 1px
+  border: 5px
     ${({ theme, type }) =>
       type === "primary" ? theme.color.text : theme.color.secondary}
     solid;
