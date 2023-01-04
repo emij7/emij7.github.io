@@ -10,6 +10,7 @@ import usaFlag from "../utils/usaFlag.png";
 import { Image } from "../components/atoms/image/image";
 import { Light } from "../components/icons/light/light";
 import { Footer } from "../components/molecule/footer/footer";
+import { Resume } from "../components/molecule/resume/resume";
 
 export const App = () => {
   const [themeState, setThemeState] = useState("dark");
@@ -45,9 +46,9 @@ export const App = () => {
         </Button>
       </NavBar>
       <Header language={language} />
-
+      <Resume language={language} />
       <Projects language={language} />
-      <Footer/>
+      <Footer />
     </ThemeProvider>
   );
 };

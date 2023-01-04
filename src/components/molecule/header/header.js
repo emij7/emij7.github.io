@@ -1,11 +1,7 @@
 import React from "react";
 import { text } from "../../../text/text";
 import { StyledTitle } from "../../atoms/title/title.styles";
-import {
-  StyledDecoration,
-  StyledHeader,
-  StyledParagraph,
-} from "./header.styles";
+import { StyledDecoration, StyledHeader } from "./header.styles";
 
 export const Header = ({ language }) => {
   return (
@@ -15,7 +11,6 @@ export const Header = ({ language }) => {
         <StyledDecoration />
         <StyledTitle type="secondary">{text.title[language]}</StyledTitle>
       </StyledHeader>
-      <StyledParagraph>{text.description[language]}</StyledParagraph>
     </React.Fragment>
   );
 };
