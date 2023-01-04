@@ -13,6 +13,11 @@ export const darkTheme = {
     black: "#202020",
   },
   filter: "grayscale(100%)",
+  device: {
+    mobile: `(max-width: 375px)`,
+    tablet: `(max-width: 768px)`,
+    desktop: `(max-width: 1024px)`,
+  },
 };
 export const lightTheme = {
   color: {
@@ -27,7 +32,13 @@ export const lightTheme = {
     black: "#202020",
   },
   filter: "none",
+  device: {
+    mobile: `(max-width: 375px)`,
+    tablet: `(max-width: 768px)`,
+    desktop: `(max-width: 1024px)`,
+  },
 };
+
 export const GlobalStyles = createGlobalStyle`
   body {
     -moz-osx-font-smoothing: grayscale;
