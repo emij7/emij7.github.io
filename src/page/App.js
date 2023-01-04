@@ -36,13 +36,13 @@ export const App = () => {
           onClick={languageToggler}
           active={language === "es" ? true : false}
         >
-          <Image src={spainFlag} alt="Spanish Flag" size={"1.5rem"} />
+          <Image src={spainFlag} alt="Spanish Flag" size={"1.5"} />
         </Button>
         <Button
           onClick={languageToggler}
           active={language === "en" ? true : false}
         >
-          <Image src={usaFlag} alt="American Flag" size={"1.5rem"} />
+          <Image src={usaFlag} alt="American Flag" size={"1.5"} />
         </Button>
       </NavBar>
       <Header language={language} />
