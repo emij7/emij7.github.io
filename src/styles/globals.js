@@ -12,6 +12,7 @@ export const darkTheme = {
     gray: "#9B9B9B",
     black: "#202020",
   },
+  filter: "grayscale(100%)",
 };
 export const lightTheme = {
   color: {
@@ -25,6 +26,7 @@ export const lightTheme = {
     gray: "#4A4A4A",
     black: "#202020",
   },
+  filter: "none",
 };
 export const GlobalStyles = createGlobalStyle`
   body {
