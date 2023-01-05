@@ -3,12 +3,14 @@ import { createGlobalStyle } from "styled-components";
 export const darkTheme = {
   color: {
     background: "#202020",
+    oposite: "#FFFFFF",
     text: "#ffffff",
     primary: "#ffffff",
     secondary: "#4A4A4A",
-    tertiary: "#202020",
+    tertiary: "#3C8841",
     link: "#D5EFFC",
-    activeButton: "#2962FF",
+    unactiveButton: "#5B5B5B",
+    activeButton: "#4A4A4A",
     gray: "#9B9B9B",
     black: "#202020",
   },
@@ -22,12 +24,14 @@ export const darkTheme = {
 export const lightTheme = {
   color: {
     background: "#FFFFFF",
+    oposite: "#202020",
     text: "#202020",
     primary: "#202020",
     secondary: "#429743",
     tertiary: "#3C8841",
     link: "#D5EFFC",
-    activeButton: "#2962FF",
+    unactiveButton: "#3C8841",
+    activeButton: "#429743",
     gray: "#4A4A4A",
     black: "#202020",
   },

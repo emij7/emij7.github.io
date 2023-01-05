@@ -10,4 +10,5 @@ export const AsideButtons = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  margin-right: 10px;
 `;
