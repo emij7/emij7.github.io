@@ -1,10 +1,7 @@
 import styled from "styled-components";
 
 export const StyledProject = styled.div`
-  border: 5px
-    ${({ theme, type }) =>
-      type === "primary" ? theme.color.text : theme.color.secondary}
-    solid;
+  border: 5px ${({ theme }) => theme.color.secondary} solid;
   border-radius: 20px;
   overflow: hidden;
   width: 75%;

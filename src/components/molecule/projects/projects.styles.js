@@ -5,7 +5,7 @@ export const StyledProjects = styled.div`
   position: relative;
   justify-content: center;
   flex-direction: row;
-  margin: 3rem 0;
+  margin: 2rem 0;
   width: 100%;
   min-height: 40%;
 `;
