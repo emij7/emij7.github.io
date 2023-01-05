@@ -48,6 +48,7 @@ export const Projects = ({ language }) => {
               key={index}
               title={project.title[language]}
               description={project.description[language]} //Description not too big to secure responsive site.
+              tecnologies={project.tecnologies}
               image={project.image}
               link={project.link}
             />

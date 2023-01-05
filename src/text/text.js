@@ -27,6 +27,14 @@ export const text = {
       },
       image: heroAppImg,
       link: "https://emij7.github.io/super-app/",
+      tecnologies: [
+        "HTML",
+        "CSS",
+        "Javascript",
+        "React.js",
+        "Bootstrap",
+        "Formik",
+      ],
     },
     {
       id: 2,
@@ -40,6 +48,7 @@ export const text = {
       },
       image: horoscopeAppImg,
       link: "https://emij7.github.io/Horoscopos/",
+      tecnologies: ["HTML", "CSS", "Javascript", "Typescript", "React.js"],
     },
   ],
 };

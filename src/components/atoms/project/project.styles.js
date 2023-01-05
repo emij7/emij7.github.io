@@ -33,3 +33,21 @@ export const StyledProject = styled.div`
     }
   }
 `;
+export const StyledGrid = styled.div`
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  grid-auto-rows: minmax(50px, auto);
+  justify-items: center;
+  margin: 1rem 0 0 0;
+  @media ((max-width: 767px)) {
+    display: none;
+  } ;
+`;
+export const StyledGridItem = styled.p`
+  color: ${({ theme }) => theme.color.tertiary};
+  &:before {
+    content: "•";
+    padding-right: 5px;
+  }
+`;
