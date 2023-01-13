@@ -1,5 +1,6 @@
 import heroAppImg from "../images/superApp.png";
 import horoscopeAppImg from "../images/horoscope.jpg";
+import formEmuImg from "../images/formemu.jpg";
 
 export const text = {
   title: {
@@ -22,8 +23,8 @@ export const text = {
         es: "Super-Hero APP",
       },
       description: {
-        en: "Find characters and create a customized team with heroes and villains",
-        es: "Busca personajes y crea tu equipo de heroes y villanos.",
+        en: "Find characters and create a customized team with heroes and villains. Made it to complete a challenge.",
+        es: "Busca personajes y crea tu equipo de heroes y villanos. Hecho para un challenge.",
       },
       image: heroAppImg,
       link: "https://emij7.github.io/super-app/",
@@ -49,6 +50,28 @@ export const text = {
       image: horoscopeAppImg,
       link: "https://emij7.github.io/Horoscopos/",
       tecnologies: ["HTML", "CSS", "Javascript", "Typescript", "React.js"],
+    },
+    {
+      id: 3,
+      title: {
+        en: "FormEmu",
+        es: "FormEmu",
+      },
+      description: {
+        en: "Form to subscribe information to a database. Made it to complete a challenge.",
+        es: "Formulario para enviar información a una base de datos. Hecho para un challenge.",
+      },
+      image: formEmuImg,
+      link: "https://formem.vercel.app/",
+      tecnologies: [
+        "HTML",
+        "CSS",
+        "Javascript",
+        "Typescript",
+        "React.js",
+        "Styled Components",
+        "Firebase",
+      ],
     },
   ],
 };
