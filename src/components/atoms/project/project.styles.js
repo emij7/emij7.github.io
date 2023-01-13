@@ -36,6 +36,7 @@ export const StyledProject = styled.div`
 export const StyledGrid = styled.div`
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
   gap: 10px;
   grid-auto-rows: minmax(50px, auto);
   justify-items: center;
