@@ -27,4 +27,5 @@ export const StyledParagraph = styled.p`
   font-weight: 700;
   text-align: center;
   padding: 1rem;
+  height: ${(props) => props.height || "inherit"};
 `;

@@ -18,7 +18,7 @@ export const Project = ({
     <StyledProject active={active} mount={mount}>
       <Content>
         <StyledTitle type="primary"> {title}</StyledTitle>
-        <StyledParagraph> {description}</StyledParagraph>
+        <StyledParagraph height="5rem"> {description}</StyledParagraph>
         <StyledGrid>
           {tecnologies.map((tecnologie, index) => {
             return <StyledGridItem key={index}>{tecnologie}</StyledGridItem>;
