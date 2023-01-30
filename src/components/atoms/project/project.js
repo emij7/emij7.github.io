@@ -25,9 +25,11 @@ export const Project = ({
           })}
         </StyledGrid>
       </Content>
-      <a href={link} target="_blank" rel="noreferrer">
-        <Image src={image} alt={description} secondary />
-      </a>
+      <Content minHeight="400px" display="flex" alignItems="center">
+        <a href={link} target="_blank" rel="noreferrer">
+          <Image src={image} alt={description} secondary />
+        </a>
+      </Content>
     </StyledProject>
   );
 };

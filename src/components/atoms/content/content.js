@@ -6,9 +6,19 @@ export const Content = ({
   height = "auto",
   width = "auto",
   margin = "0 0",
+  minHeight,
+  display,
+  alignItems,
 }) => {
   return (
-    <StyledContent height={height} width={width} margin={margin}>
+    <StyledContent
+      height={height}
+      width={width}
+      margin={margin}
+      minHeight={minHeight}
+      display={display}
+      alignItems={alignItems}
+    >
       {children}
     </StyledContent>
   );

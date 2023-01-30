@@ -7,5 +7,5 @@ export const StyledProjects = styled.div`
   flex-direction: row;
   margin: 2rem 0;
   width: 100%;
-  min-height: 40%;
+  min-height: 80%;
 `;

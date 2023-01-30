@@ -35,7 +35,7 @@ export const Projects = ({ language }) => {
     }, 500);
   };
   return (
-    <Content margin={"5rem 0"}>
+    <Content margin={"5rem 0"} minHeight="80%">
       <StyledTitle type={"primary"}>
         {text.portfolioSection[language]}
       </StyledTitle>
@@ -53,7 +53,7 @@ export const Projects = ({ language }) => {
               link={project.link}
             />
           ) : (
-            <Content height="400px"></Content>
+            <Content height="80%"></Content>
           );
         })}
         <Button secondary onClick={plusFocused} />
