@@ -10,6 +10,7 @@ export const StyledAnimatedTitle = styled.h1`
   color: ${({ theme, type }) =>
     type === "primary" ? theme.color.text : theme.color.secondary};
   text-align: center;
+  white-space: nowrap;
   -webkit-animation: focus-in-contract 4s cubic-bezier(0.35, 0.46, 0.45, 0.94)
     both;
   animation: focus-in-contract 4s cubic-bezier(0.35, 0.46, 0.45, 0.94) both;
