@@ -2,17 +2,17 @@ import { createGlobalStyle } from "styled-components";
 
 export const darkTheme = {
   color: {
-    background: "#202020",
-    oposite: "#FFFFFF",
-    text: "#ffffff",
-    primary: "#ffffff",
+    background: "#252e25",
+    oposite: "#f0f5f0",
+    text: "#f0f5f0",
+    primary: "#f0f5f0",
     secondary: "#4A4A4A",
     tertiary: "#3C8841",
     link: "#D5EFFC",
     unactiveButton: "#5B5B5B",
     activeButton: "#4A4A4A",
     gray: "#9B9B9B",
-    black: "#202020",
+    black: "#303030",
   },
   filter: "grayscale(100%)",
   device: {
@@ -23,17 +23,17 @@ export const darkTheme = {
 };
 export const lightTheme = {
   color: {
-    background: "#FFFFFF",
-    oposite: "#202020",
-    text: "#202020",
-    primary: "#202020",
+    background: "#f0f5f0",
+    oposite: "#303030",
+    text: "#303030",
+    primary: "#303030",
     secondary: "#429743",
     tertiary: "#3C8841",
     link: "#D5EFFC",
     unactiveButton: "#3C8841",
     activeButton: "#429743",
     gray: "#4A4A4A",
-    black: "#202020",
+    black: "#303030",
   },
   filter: "none",
   device: {
