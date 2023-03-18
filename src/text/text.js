@@ -1,6 +1,7 @@
 import heroAppImg from "../images/superApp.png";
 import horoscopeAppImg from "../images/horoscope.jpg";
 import formEmuImg from "../images/formemu.jpg";
+import monsterFinderImg from "../images/monsterFinder.png";
 
 export const text = {
   title: {
@@ -18,6 +19,20 @@ export const text = {
   projects: [
     {
       id: 1,
+      title: {
+        en: "Monster Finder",
+        es: "Buscador de monstrous",
+      },
+      description: {
+        en: "Find monsters. Project to practice in ZTM course",
+        es: "Busca Monstruos. Proyecto de práctica en curso de ZTM",
+      },
+      image: monsterFinderImg,
+      link: "https://monsters-emij7.vercel.app/",
+      tecnologies: ["HTML", "CSS", "Javascript", "React.js"],
+    },
+    {
+      id: 2,
       title: {
         en: "Super-Hero APP",
         es: "Super-Hero APP",
@@ -38,7 +53,7 @@ export const text = {
       ],
     },
     {
-      id: 2,
+      id: 3,
       title: {
         en: "Horoscope app",
         es: "App horóscopo",
@@ -52,7 +67,7 @@ export const text = {
       tecnologies: ["HTML", "CSS", "Javascript", "Typescript", "React.js"],
     },
     {
-      id: 3,
+      id: 4,
       title: {
         en: "FormEmu",
         es: "FormEmu",
