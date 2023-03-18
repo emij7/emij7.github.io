@@ -17,6 +17,9 @@ export const StyledProject = styled.a`
     transform: scale(1.05);
     border: 3px ${({ theme }) => theme.color.primary} solid;
   }
+  &:hover h1 {
+    color: ${({ theme }) => theme.color.tertiary};
+  }
 `;
 export const StyledGrid = styled.div`
   display: grid;
