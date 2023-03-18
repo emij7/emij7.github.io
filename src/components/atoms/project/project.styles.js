@@ -20,6 +20,12 @@ export const StyledProject = styled.a`
   &:hover h1 {
     color: ${({ theme }) => theme.color.tertiary};
   }
+  @media (${({ theme }) => theme.device.mobileL}) {
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
+    align-items: center;
+  } ;
 `;
 export const StyledGrid = styled.div`
   display: grid;
@@ -27,6 +33,10 @@ export const StyledGrid = styled.div`
   gap: 0.3rem;
   grid-auto-rows: minmax(10px, 20px);
   justify-items: start;
+  @media (${({ theme }) => theme.device.mobileL}) {
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1rem;
+  } ;
 `;
 export const StyledGridItem = styled.p`
   color: ${({ theme }) => theme.color.tertiary};

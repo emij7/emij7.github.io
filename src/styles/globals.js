@@ -16,7 +16,8 @@ export const darkTheme = {
   },
   filter: "grayscale(100%)",
   device: {
-    mobile: `(max-width: 375px)`,
+    mobileS: `(max-width: 375px)`,
+    mobileL: `(max-width: 450px)`,
     tablet: `(max-width: 768px)`,
     desktop: `(max-width: 1024px)`,
   },
