@@ -1,11 +1,12 @@
 import styled from "styled-components";
 
 export const StyledProjects = styled.div`
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 500px));
+  grid-gap: 3rem;
   position: relative;
   justify-content: center;
   flex-direction: row;
-  margin: 2rem 0;
   width: 100%;
-  min-height: 80%;
+  justify-items: center;
 `;

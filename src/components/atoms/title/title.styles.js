@@ -4,6 +4,8 @@ export const StyledTitle = styled.h1`
   color: ${({ theme, type }) =>
     type === "primary" ? theme.color.text : theme.color.secondary};
   text-align: center;
+  font-size: ${({ fontSize }) => fontSize};
+  grid-column: 1/3;
 `;
 
 export const StyledAnimatedTitle = styled.h1`

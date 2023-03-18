@@ -24,8 +24,7 @@ export const StyledDecoration = styled.div`
 `;
 
 export const StyledParagraph = styled.p`
-  font-weight: 700;
+  color: ${({ theme }) => theme.color.text};
   text-align: center;
-  padding: 1rem;
   height: ${(props) => props.height || "inherit"};
 `;

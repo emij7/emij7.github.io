@@ -7,7 +7,8 @@ export const StyledImage = styled.img`
 `;
 const projectImg = css`
   width: 100%;
-  padding: 0.5rem;
+  grid-row: 2/4;
+  grid-column: 1/2;
 `;
 const personalImage = css`
   filter: ${({ type, theme }) =>
