@@ -2,6 +2,7 @@ import heroAppImg from "../images/superApp.png";
 import horoscopeAppImg from "../images/horoscope.jpg";
 import formEmuImg from "../images/formemu.jpg";
 import monsterFinderImg from "../images/monsterFinder.png";
+import shopImg from "../images/shop.jpg";
 
 export const text = {
   title: {
@@ -20,6 +21,28 @@ export const text = {
     {
       id: 1,
       title: {
+        en: "Shop (in progress)",
+        es: "Tienda (en construcción)",
+      },
+      description: {
+        en: "Buy sportswear",
+        es: "Compra ropa deportiva",
+      },
+      image: shopImg,
+      link: "https://capstone-project-emij7.vercel.app/",
+      tecnologies: [
+        "HTML",
+        "CSS",
+        "Javascript",
+        "React.js",
+        "Redux Toolkit",
+        "GraphQL",
+        "Styled Comp.",
+      ],
+    },
+    {
+      id: 2,
+      title: {
         en: "Monster Finder",
         es: "Buscador de monstrous",
       },
@@ -32,7 +55,7 @@ export const text = {
       tecnologies: ["HTML", "CSS", "Javascript", "React.js"],
     },
     {
-      id: 2,
+      id: 3,
       title: {
         en: "Super-Hero APP",
         es: "Super-Hero APP",
@@ -53,7 +76,7 @@ export const text = {
       ],
     },
     {
-      id: 3,
+      id: 4,
       title: {
         en: "Horoscope app",
         es: "App horóscopo",
@@ -67,7 +90,7 @@ export const text = {
       tecnologies: ["HTML", "CSS", "Javascript", "Typescript", "React.js"],
     },
     {
-      id: 4,
+      id: 5,
       title: {
         en: "FormEmu",
         es: "FormEmu",
