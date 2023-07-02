@@ -21,8 +21,8 @@ export const text = {
     {
       id: 1,
       title: {
-        en: "Shop (in progress)",
-        es: "Tienda (en construcción)",
+        en: "Shop (w/ redux toolkit)",
+        es: "Tienda (con redux toolkit)",
       },
       description: {
         en: "Buy sportswear",
@@ -36,7 +36,6 @@ export const text = {
         "Javascript",
         "React.js",
         "Redux Toolkit",
-        "GraphQL",
         "Styled Comp.",
       ],
     },
