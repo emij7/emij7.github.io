@@ -13,6 +13,7 @@ export const darkTheme = {
     activeButton: "#4A4A4A",
     gray: "#9B9B9B",
     black: "#303030",
+    appBackground: "#000000",
   },
   filter: "grayscale(100%)",
   device: {
@@ -35,6 +36,7 @@ export const lightTheme = {
     activeButton: "#429743",
     gray: "#4A4A4A",
     black: "#303030",
+    appBackground: "#f0f5f0",
   },
   filter: "none",
   device: {
@@ -49,7 +51,7 @@ export const GlobalStyles = createGlobalStyle`
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;
     overscroll-behavior: none;
-    background: ${({ theme }) => theme.color.background};
+    background: ${({ theme }) => theme.color.appBackground};
     color: ${({ theme }) => theme.color.text};
     font-family: Tahoma, Helvetica, Arial, Roboto, sans-serif;
     transition: all 0.50s linear;

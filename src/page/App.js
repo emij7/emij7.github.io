@@ -13,6 +13,7 @@ import { Footer } from "../components/molecule/footer/footer";
 import { Resume } from "../components/molecule/resume/resume";
 
 export const App = () => {
+  const [isIntersecting, setIsIntersecting] = useState(true);
   const [themeState, setThemeState] = useState("dark");
   const themeToggler = () => {
     themeState === "light" ? setThemeState("dark") : setThemeState("light");
@@ -21,6 +22,7 @@ export const App = () => {
   const languageToggler = () => {
     language === "es" ? setLanguage("en") : setLanguage("es");
   };
+
   return (
     <ThemeProvider theme={themeState === "dark" ? darkTheme : lightTheme}>
       <GlobalStyles />
@@ -45,10 +47,10 @@ export const App = () => {
           <Image src={usaFlag} alt="American Flag" size={"1.5"} />
         </Button>
       </NavBar>
-      <Header language={language} />
+      <Header language={language} setIsIntersecting={setIsIntersecting} />
       <Resume language={language} />
       <Projects language={language} />
-      <Footer />
+      <Footer isIntersecting={isIntersecting} language={language} />
     </ThemeProvider>
   );
 };

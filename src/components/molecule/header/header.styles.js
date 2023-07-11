@@ -5,6 +5,7 @@ export const StyledHeader = styled.div`
   justify-content: center;
   flex-direction: row;
   margin: 3rem 0;
+  overflow-x: hidden;
   @media (max-width: 650px) {
     flex-direction: column;
     align-items: center;
