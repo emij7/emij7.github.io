@@ -4,11 +4,11 @@ export const StyledProject = styled.a`
   border: 2px ${({ theme }) => theme.color.secondary} solid;
   border-radius: 5px;
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 0.4fr 1fr 1fr;
+  grid-template-columns: 0.8fr 1.2fr;
+  grid-template-rows: 0.4fr 0fr 1fr;
   height: 18rem;
   align-items: start;
-  max-width: 90%;
+  max-width: 80%;
   padding: 1rem;
   grid-gap: 0.5rem;
   transform: translateZ(0);
@@ -20,23 +20,23 @@ export const StyledProject = styled.a`
   &:hover h1 {
     color: ${({ theme }) => theme.color.tertiary};
   }
-  @media (${({ theme }) => theme.device.mobileL}) {
+  @media (${({ theme }) => theme.device.tablet}) {
     display: flex;
     flex-direction: column;
     height: fit-content;
     align-items: center;
-  } ;
+  }
 `;
 export const StyledGrid = styled.div`
   display: grid;
-  grid-template-columns: 1.3fr 1fr;
+  grid-template-columns: 1fr 1fr;
   gap: 0.3rem;
   grid-auto-rows: minmax(10px, 20px);
   justify-items: start;
-  @media (${({ theme }) => theme.device.mobileL}) {
-    grid-template-columns: 1fr 1fr 1fr;
+  @media (${({ theme }) => theme.device.tablet}) {
+    grid-template-columns: 1fr 1fr;
     gap: 1rem;
-  } ;
+  }
 `;
 export const StyledGridItem = styled.p`
   color: ${({ theme }) => theme.color.tertiary};
@@ -44,6 +44,7 @@ export const StyledGridItem = styled.p`
     content: "•";
     padding-right: 5px;
   }
+  white-space: nowrap;
 `;
 // @media ((max-width: 767px)) {
 //   display: none;

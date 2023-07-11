@@ -21,8 +21,8 @@ export const text = {
     {
       id: 1,
       title: {
-        en: "Shop (w/ redux toolkit)",
-        es: "Tienda (con redux toolkit)",
+        en: "Shop ",
+        es: "Tienda ",
       },
       description: {
         en: "Buy sportswear",
