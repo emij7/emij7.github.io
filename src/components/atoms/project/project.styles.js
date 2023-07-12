@@ -20,7 +20,7 @@ export const StyledProject = styled.a`
   &:hover h1 {
     color: ${({ theme }) => theme.color.tertiary};
   }
-  @media (${({ theme }) => theme.device.tablet}) {
+  @media (${({ theme }) => theme.device.desktop}) {
     display: flex;
     flex-direction: column;
     height: fit-content;
@@ -31,9 +31,11 @@ export const StyledGrid = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 0.3rem;
+  margin: 0.5rem 0 0 0.5rem;
   grid-auto-rows: minmax(10px, 20px);
   justify-items: start;
-  @media (${({ theme }) => theme.device.tablet}) {
+  @media (${({ theme }) => theme.device.desktop}) {
+    display: none;
     grid-template-columns: 1fr 1fr;
     gap: 1rem;
   }

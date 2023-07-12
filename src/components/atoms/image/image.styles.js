@@ -6,6 +6,7 @@ export const StyledImage = styled.img`
   ${({ resumeImage }) => resumeImage && personalImage}
 `;
 const projectImg = css`
+  min-width: 130px;
   width: 100%;
   grid-row: 2/4;
   grid-column: 1/2;

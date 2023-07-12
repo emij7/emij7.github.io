@@ -34,9 +34,9 @@ export const text = {
         "HTML",
         "CSS",
         "Javascript",
+        "Styled Comp.",
         "React.js",
         "Redux Toolkit",
-        "Styled Comp.",
       ],
     },
     {
@@ -56,11 +56,11 @@ export const text = {
     {
       id: 3,
       title: {
-        en: "Super-Hero APP",
-        es: "Super-Hero APP",
+        en: "Super-Hero ",
+        es: "Super-Hero ",
       },
       description: {
-        en: "Find characters and create a customized team with heroes and villains. Made it to complete a challenge.",
+        en: "Find characters and create your team with heroes and villains. Made it to complete a challenge.",
         es: "Busca personajes y crea tu equipo de heroes y villanos. Hecho para un challenge.",
       },
       image: heroAppImg,

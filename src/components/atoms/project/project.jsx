@@ -25,7 +25,7 @@ export const Project = ({
         {title}
       </StyledTitle>
       <Image src={image} alt={description} secondary />
-      <StyledParagraph height="5rem"> {description}</StyledParagraph>
+      <StyledParagraph height="6rem"> {description}</StyledParagraph>
       <StyledGrid>
         {tecnologies.map((tecnologie, index) => {
           return <StyledGridItem key={index}>{tecnologie}</StyledGridItem>;
