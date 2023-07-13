@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Github } from "../../icons/github/github";
 import { Gmail } from "../../icons/gmail/gmail";
 import { Linkedin } from "../../icons/linkedin/linkedin";
@@ -10,34 +10,49 @@ import {
   StyledIconContainer,
 } from "./footer.styles";
 import { text } from "../../../text/text";
+import { Content } from "../../atoms/content/content";
 
 export const Footer = ({ isIntersecting, language }) => {
+  const [firstTime, setFirstTime] = useState(true);
+
+  useEffect(() => {
+    if (!isIntersecting && firstTime) {
+      setFirstTime(false);
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [isIntersecting]);
+
   return (
     <StyledFooter isIntersecting={isIntersecting}>
-      {isIntersecting ? (
-        <StyledIconContainer>
-          <Gmail />
-          <Github />
-          <Linkedin />
-        </StyledIconContainer>
+      {!firstTime ? (
+        <StyledFooterContainer>
+          <StyledAnimatedFooter
+            type="primary"
+            isIntersecting={isIntersecting}
+            firstTime={firstTime}
+          >
+            Emiliano Juarez
+          </StyledAnimatedFooter>
+          <FooterDecoration
+            isIntersecting={isIntersecting}
+            firstTime={firstTime}
+          />
+          <StyledAnimatedFooter
+            type="secondary"
+            isIntersecting={isIntersecting}
+            firstTime={firstTime}
+          >
+            {text.title[language]}
+          </StyledAnimatedFooter>
+        </StyledFooterContainer>
       ) : (
-        <>
-          <StyledFooterContainer>
-            <StyledAnimatedFooter type="primary" isIntersecting>
-              Emiliano Juarez
-            </StyledAnimatedFooter>
-            <FooterDecoration />
-            <StyledAnimatedFooter type="secondary" isIntersecting>
-              {text.title[language]}
-            </StyledAnimatedFooter>
-          </StyledFooterContainer>
-          <StyledIconContainer>
-            <Gmail />
-            <Github />
-            <Linkedin />
-          </StyledIconContainer>
-        </>
+        <Content as="div"></Content>
       )}
+      <StyledIconContainer>
+        <Gmail />
+        <Github />
+        <Linkedin />
+      </StyledIconContainer>
     </StyledFooter>
   );
 };
