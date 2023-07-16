@@ -8,6 +8,8 @@ export const Image = ({
   src,
   secondary,
   resumeImage,
+  height,
+  width,
 }) => {
   return (
     <StyledImage
@@ -15,6 +17,8 @@ export const Image = ({
       alt={alt}
       src={src}
       size={size}
+      width={width}
+      height={height}
       secondary={secondary}
       resumeImage={resumeImage}
     />
