@@ -3,6 +3,7 @@ import horoscopeAppImg from "../images/horoscope.jpg";
 import formEmuImg from "../images/formemu.jpg";
 import monsterFinderImg from "../images/monsterFinder.png";
 import shopImg from "../images/shop.jpg";
+import nextJsImg from "../images/nextCourse.jpg";
 
 export const text = {
   title: {
@@ -16,6 +17,10 @@ export const text = {
   description: {
     en: "I'm an autodidact who is always learning new things. I use React to build web applications and I'm always looking for new ways to improve my skills. You can see some of my projects in the portfolio section.",
     es: "Soy un autodidacta que siempre está aprendiendo nuevas cosas. Uso React para construir aplicaciones web y siempre estoy buscando nuevas formas de mejorar mis habilidades. Puedes ver algunos de mis proyectos en la sección portafolio.",
+  },
+  newSite: {
+    en: "New site coming soon!",
+    es: "¡Próximamente nueva página!",
   },
   projects: [
     {
@@ -109,6 +114,20 @@ export const text = {
         "Firebase",
         "Styled Comp.",
       ],
+    },
+    {
+      id: 6,
+      title: {
+        en: "Next.js course. (in progress)",
+        es: "Curso Next.js (En proceso)",
+      },
+      description: {
+        en: "Next.js course from official documentation. https://nextjs.org/learn",
+        es: "Curso para aprender next.js desde documentación oficial. https://nextjs.org/learn",
+      },
+      image: nextJsImg,
+      link: "https://emij7-nextcourse.vercel.app/",
+      tecnologies: ["HTML", "CSS", "Tailwind", "Next.js", "React.js"],
     },
   ],
 };
