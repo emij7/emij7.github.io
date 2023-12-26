@@ -14,6 +14,7 @@ export const Resume = ({ children, language }) => {
         resumeImage
       />
       <StyledDescription>{text.description[language]}</StyledDescription>
+      <StyledDescription>{text.newSite[language]}</StyledDescription>
     </StyledResume>
   );
 };
