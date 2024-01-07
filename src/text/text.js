@@ -118,8 +118,8 @@ export const text = {
     {
       id: 6,
       title: {
-        en: "Next.js course. (in progress)",
-        es: "Curso Next.js (En proceso)",
+        en: "Next.js course.",
+        es: "Curso Next.js.",
       },
       description: {
         en: "Next.js course from official documentation. https://nextjs.org/learn",
