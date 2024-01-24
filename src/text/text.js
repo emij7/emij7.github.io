@@ -4,6 +4,7 @@ import formEmuImg from "../images/formemu.jpg";
 import monsterFinderImg from "../images/monsterFinder.png";
 import shopImg from "../images/shop.jpg";
 import nextJsImg from "../images/nextCourse.jpg";
+import faceDetect from "../images/faceDetect.jpg";
 
 export const text = {
   title: {
@@ -128,6 +129,27 @@ export const text = {
       image: nextJsImg,
       link: "https://emij7-nextcourse.vercel.app/",
       tecnologies: ["HTML", "CSS", "Tailwind", "Next.js", "React.js"],
+    },
+    {
+      id: 7,
+      title: {
+        en: "Face detector App",
+        es: "Face detector App",
+      },
+      description: {
+        en: "Detect faces in images",
+        es: "Detecta caras en imágenes",
+      },
+      image: faceDetect,
+      link: "https://face-detector-woad.vercel.app/",
+      tecnologies: [
+        "Styled Comp.",
+        "React-parallax",
+        "Tachyons",
+        "Next.js",
+        "React.js",
+        "Clarifai",
+      ],
     },
   ],
 };
