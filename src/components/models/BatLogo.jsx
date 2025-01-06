@@ -8,16 +8,26 @@ Title: Batman 1989 Logo
 "use client";
 import React, { useRef } from "react";
 import { useGLTF } from "@react-three/drei";
+import { useFrame } from "@react-three/fiber";
 
 export default function BatLogo(props) {
   const { nodes, materials } = useGLTF("/models/bat-logo-transformed.glb");
+
+  const modelRef = useRef();
+
+  useFrame((state, delta, xrFrame) => {
+    modelRef.current.position.y =
+      -1.5 + Math.sin(state.clock.elapsedTime) * 0.1;
+  });
+
   return (
     <group
       {...props}
       dispose={null}
+      ref={modelRef}
       position={[0, -1.5, 0]}
       scale={[0.37, 0.37, 0.37]}
-      rotation={[0.2, 0.4, 0]}
+      rotation={[0.2, -0.2, 0]}
     >
       <mesh
         name="Badge_0"
