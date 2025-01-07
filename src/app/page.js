@@ -2,6 +2,7 @@ import Image from "next/image";
 import bg from "../../public/background/home-background-bt.png";
 import RenderModel from "../components/RenderModel";
 import BatLogo from "../components/models/BatLogo";
+import Navigation from "../components/navigation";
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
       />
       <div className="w-full h-screen">
         {/* nav and 3dmodels */}
+        <Navigation />
         <RenderModel>
           <BatLogo />
         </RenderModel>
