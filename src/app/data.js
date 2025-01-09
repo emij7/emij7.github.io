@@ -106,18 +106,16 @@ export const BtnList = [
     icon: "linkedin",
     newTab: true,
   },
-  {
-    label: "X",
-    link: "https://www.x.com/code_bucks",
-    icon: "twitter",
-    newTab: true,
-  },
-  {
-    label: "Resume",
-    link: "/resume.pdf",
-    icon: "resume",
-    newTab: true,
-  },
+  // {
+  //   label: "X",
+  //   link: "https://www.x.com/code_bucks",
+  //   icon: "twitter",
+  //   newTab: true,
+  // },
+  // {
+  //   label: "Resume",
+  //   link: "/resume.pdf",
+  //   icon: "resume",
+  //   newTab: true,
+  // },
 ];
-
-

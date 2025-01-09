@@ -6,12 +6,12 @@ import Navigation from "../components/navigation";
 
 export default function Home() {
   return (
-    <main className="flex h-screen flex-col items-center justify-between relative">
+    <main className="flex min-h-screen flex-col items-center justify-between relative">
       <Image
         src={bg}
         alt="bg-image"
         fill
-        className="absolute inset-0 w-full h-full object-cover object-center opacity-25"
+        className="-z-50 w-full h-full object-cover object-center opacity-50"
       />
       <div className="w-full h-screen">
         {/* nav and 3dmodels */}
