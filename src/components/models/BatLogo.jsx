@@ -17,7 +17,7 @@ export default function BatLogo(props) {
 
   useFrame((state, delta, xrFrame) => {
     modelRef.current.position.y =
-      -1.5 + Math.sin(state.clock.elapsedTime) * 0.1;
+      -1.2 + Math.sin(state.clock.elapsedTime) * 0.1;
   });
 
   return (
@@ -25,7 +25,7 @@ export default function BatLogo(props) {
       {...props}
       dispose={null}
       ref={modelRef}
-      position={[0, -1.5, 0]}
+      position={[0.1, -1.5, 0]}
       scale={[0.37, 0.37, 0.37]}
       rotation={[0.2, -0.2, 0]}
     >
