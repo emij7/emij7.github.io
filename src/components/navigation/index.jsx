@@ -8,15 +8,21 @@ const Navigation = () => {
 
   return (
     <div class="w-full fixed h-screen flex items-center justify-center">
-      <div className="flex items-center justify-between relative">
+      <div className="flex items-center justify-center relative animate-spin-slow hover:pause group">
         {BtnList.map((btn, index) => {
-          const angle = (index * angleIncrement * Math.PI) / 180;
+          const angle =
+            (index * angleIncrement * Math.PI) / 180;
           const radius = "calc(22vw - 1rem)";
           const x = `calc(${radius} * ${Math.cos(angle)})`;
           const y = `calc(${radius} * ${Math.sin(angle)})`;
           console.log(index, angle, radius, x, y);
           return (
-            <NavButton key={btn.label} x={x} y={y} {...btn} />
+            <NavButton
+              key={btn.label}
+              x={x}
+              y={y}
+              {...btn}
+            />
             // <button
             //   key={index}
             //   className="absolute"
