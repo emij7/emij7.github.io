@@ -31,7 +31,7 @@ const RainBackground = () => {
       {rain.map((drop) => (
         <div
           key={drop.id}
-          className="absolute h-4 bg-slate-500"
+          className="absolute h-4 bg-slate-600"
           style={{
             width: "1px",
             top: drop.top,
