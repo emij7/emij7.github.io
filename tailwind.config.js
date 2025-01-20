@@ -34,6 +34,7 @@ module.exports = {
         "spin-slow": "spin 40s linear infinite",
         "spin-slow-reverse":
           "spin-reverse 40s linear infinite",
+        rainMove: "rainMove 1s linear infinite",
       },
     },
   },
