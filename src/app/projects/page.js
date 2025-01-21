@@ -1,5 +1,9 @@
 import Image from "next/image";
 import bg from "../../../public/background/projects-background.png";
+import ProjectList from "../../components/projects";
+import { projectsData } from "../data";
+import RenderModel from "../../components/RenderModel";
+import Batman from "../../components/models/Batman";
 
 export default function Projects() {
   return (
@@ -10,7 +14,12 @@ export default function Projects() {
         fill
         className="-z-50 w-full h-full object-cover object-center opacity-50"
       />
-      Projects page
+      <ProjectList projects={projectsData} />
+      <div className="flex items-center justify-center fixed top-20 left-0 h-screen">
+        <RenderModel>
+          <Batman />
+        </RenderModel>
+      </div>
     </main>
   );
 }
