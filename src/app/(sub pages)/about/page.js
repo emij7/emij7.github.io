@@ -1,9 +1,10 @@
 import Image from "next/image";
-import bg from "../../../../public/background/projects-background.png";
+import bg from "../../../../public/background/about-background.jpg";
 import ProjectList from "../../../components/projects";
 import { projectsData } from "../../data";
 import RenderModel from "../../../components/RenderModel";
 import Batman from "../../../components/models/Batman";
+import BatMask from "../../../components/models/BatMask";
 
 export default function Projects() {
   return (
@@ -13,11 +14,20 @@ export default function Projects() {
         alt="bg-image"
         className="-z-50 fixed top-0 left-0 w-full h-full object-cover object-center opacity-50"
       />
-      <ProjectList projects={projectsData} />
-      <div className="flex items-center justify-center fixed top-20 left-0 h-screen">
+      <div className="w-full h-screen absolute top-1/2 -translate-y-1/2 left-0">
         <RenderModel>
-          <Batman />
+          <BatMask />
         </RenderModel>
+      </div>
+      <div className="relative w-full h-screen flex flex-col items-center justify-center">
+        <div className="absolute flex flex-col items-center text-center top-[60%] left-1/2 -translate-x-1/2">
+          <h1 className="font-bold text-6xl text-accent">
+            Emiliano Juarez
+          </h1>
+          <p className="font-light text-foreground text-base">
+            Find out who is behind the mask.
+          </p>
+        </div>
       </div>
     </>
   );
