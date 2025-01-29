@@ -19,7 +19,19 @@ export default function BatMask(props) {
   const modelRef = useRef();
 
   useFrame((state, delta, xrFrame) => {
-    modelRef.current.rotation.y += 0.003;
+    if (modelRef.current.rotation.izquierda == true) {
+      if (modelRef.current.rotation.y <= -1) {
+        modelRef.current.rotation.izquierda = false;
+        return;
+      }
+      modelRef.current.rotation.y -= 0.001;
+    } else {
+      if (modelRef.current.rotation.y >= 1) {
+        modelRef.current.rotation.izquierda = true;
+        return;
+      }
+      modelRef.current.rotation.y += 0.001;
+    }
   });
 
   return (
@@ -28,7 +40,7 @@ export default function BatMask(props) {
       dispose={null}
       ref={modelRef}
       scale={[10, 10, 10]}
-      position={[0, -1.5, 0]}
+      position={[0, -0.8, 0]}
     >
       <mesh
         castShadow

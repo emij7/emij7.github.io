@@ -11,7 +11,9 @@ import { useGLTF } from "@react-three/drei";
 import { useFrame } from "@react-three/fiber";
 
 export default function BatLogo(props) {
-  const { nodes, materials } = useGLTF("/models/bat-logo-transformed.glb");
+  const { nodes, materials } = useGLTF(
+    "/models/bat-logo-transformed.glb"
+  );
 
   const modelRef = useRef();
 
@@ -25,7 +27,7 @@ export default function BatLogo(props) {
       {...props}
       dispose={null}
       ref={modelRef}
-      position={[0.1, -1.5, 0]}
+      position={[-0.15, -1.5, 0]}
       scale={[0.37, 0.37, 0.37]}
       rotation={[0.2, -0.2, 0]}
     >
