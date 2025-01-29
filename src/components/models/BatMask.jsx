@@ -24,13 +24,13 @@ export default function BatMask(props) {
         modelRef.current.rotation.izquierda = false;
         return;
       }
-      modelRef.current.rotation.y -= 0.001;
+      modelRef.current.rotation.y -= 0.002;
     } else {
       if (modelRef.current.rotation.y >= 1) {
         modelRef.current.rotation.izquierda = true;
         return;
       }
-      modelRef.current.rotation.y += 0.001;
+      modelRef.current.rotation.y += 0.002;
     }
   });
 

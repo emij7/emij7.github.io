@@ -5,6 +5,7 @@ import { projectsData } from "../../data";
 import RenderModel from "../../../components/RenderModel";
 import Batman from "../../../components/models/Batman";
 import BatMask from "../../../components/models/BatMask";
+import AboutDetails from "../../../components/about";
 
 export default function Projects() {
   return (
@@ -29,6 +30,7 @@ export default function Projects() {
           </p>
         </div>
       </div>
+      <AboutDetails />
     </>
   );
 }
