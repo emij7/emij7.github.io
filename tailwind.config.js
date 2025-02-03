@@ -36,6 +36,9 @@ module.exports = {
           "spin-reverse 40s linear infinite",
         rainMove: "rainMove 1s linear infinite",
       },
+      screens: {
+        xs: "480px",
+      },
     },
   },
   plugins: [],
