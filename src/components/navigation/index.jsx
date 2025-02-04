@@ -4,6 +4,17 @@ import { BtnList } from "../../app/data";
 import NavButton from "./NavButton";
 import useScreenSize from "../hooks/useScreenSize";
 import ResponsiveComponent from "../ResponsiveComponent";
+import { motion } from "framer-motion";
+
+const container = {
+  hidden: { opacity: 0 },
+  show: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.4,
+    },
+  },
+};
 
 const Navigation = () => {
   const size = useScreenSize();
@@ -23,7 +34,12 @@ const Navigation = () => {
       <ResponsiveComponent>
         {({ size }) => {
           return size && size >= 480 ? (
-            <div className="flex items-center justify-center relative animate-spin-slow hover:pause group">
+            <motion.div
+              variants={container}
+              initial="hidden"
+              animate="show"
+              className="flex items-center justify-center relative animate-spin-slow hover:pause group"
+            >
               {BtnList.map((btn, index) => {
                 const angle =
                   (index * angleIncrement * Math.PI) / 180;
@@ -47,9 +63,14 @@ const Navigation = () => {
                   />
                 );
               })}
-            </div>
+            </motion.div>
           ) : (
-            <div className="flex justify-between">
+            <motion.div
+              variants={container}
+              initial="hidden"
+              animate="show"
+              className="flex justify-between"
+            >
               {BtnList.map((btn, index) => {
                 return (
                   <NavButton
@@ -60,7 +81,7 @@ const Navigation = () => {
                   />
                 );
               })}
-            </div>
+            </motion.div>
           );
         }}
       </ResponsiveComponent>

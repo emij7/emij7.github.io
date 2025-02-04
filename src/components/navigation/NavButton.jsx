@@ -11,6 +11,7 @@ import {
 import Link from "next/link";
 import React from "react";
 import ResponsiveComponent from "../ResponsiveComponent";
+import { motion } from "framer-motion";
 
 const getIcon = (icon) => {
   switch (icon) {
@@ -52,6 +53,14 @@ const getIcon = (icon) => {
   }
 };
 
+const item = {
+  hidden: { scale: 0 },
+  show: { scale: 1 },
+};
+
+//Forma de declarar un componente como Link que es de next.js, con motion
+const NavLink = motion(Link);
+
 const NavButton = ({ x, y, label, link, icon, newTab }) => {
   return (
     <ResponsiveComponent>
@@ -63,7 +72,8 @@ const NavButton = ({ x, y, label, link, icon, newTab }) => {
               transform: `translate(${x}, ${y})`,
             }}
           >
-            <Link
+            <NavLink
+              variants={item}
               href={link}
               target={newTab ? "_blank" : "_self"}
               className="text-foreground rounded-full group flex items-center justify-center custom-bg"
@@ -87,11 +97,12 @@ const NavButton = ({ x, y, label, link, icon, newTab }) => {
                   {label}
                 </span>
               </span>
-            </Link>
+            </NavLink>
           </div>
         ) : (
           <div className="cursor-pointer z-50 mx-2">
-            <Link
+            <NavLink
+              variants={item}
               href={link}
               target={newTab ? "_blank" : "_self"}
               className="text-foreground rounded-full group flex items-center justify-center custom-bg"
@@ -116,7 +127,7 @@ const NavButton = ({ x, y, label, link, icon, newTab }) => {
                   {label}
                 </span>
               </span>
-            </Link>
+            </NavLink>
           </div>
         );
       }}
