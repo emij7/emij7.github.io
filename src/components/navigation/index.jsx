@@ -45,15 +45,6 @@ const Navigation = () => {
                     y={y}
                     {...btn}
                   />
-                  // <button
-                  //   key={index}
-                  //   className="absolute"
-                  //   style={{
-                  //     transform: `translate(${x}, ${y})`,
-                  //   }}
-                  // >
-                  //   {btn.label}
-                  // </button>
                 );
               })}
             </div>

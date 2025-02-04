@@ -14,7 +14,7 @@ export default function Projects() {
         className="-z-50 fixed top-0 left-0 w-full h-full object-cover object-center opacity-50"
       />
       <ProjectList projects={projectsData} />
-      <div className="flex items-center justify-center fixed top-20 left-0 h-screen">
+      <div className="flex items-center justify-center fixed xl:top-20 xl:left-0 h-screen -z-20">
         <RenderModel>
           <Batman />
         </RenderModel>
