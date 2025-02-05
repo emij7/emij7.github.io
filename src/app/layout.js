@@ -1,6 +1,7 @@
 import { Inter } from "next/font/google";
 import "./globals.css";
 import clsx from "clsx";
+import Sound from "../components/Sound";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -23,6 +24,8 @@ export default function RootLayout({ children }) {
         )}
       >
         {children}
+        <Sound />
+        {/* <div id="modal-root" /> */}
       </body>
     </html>
   );
