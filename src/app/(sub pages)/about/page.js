@@ -1,16 +1,21 @@
 import Image from "next/image";
 import bg from "../../../../public/background/about-background.jpg";
-import ProjectList from "../../../components/projects";
-import { projectsData } from "../../data";
 import RenderModel from "../../../components/RenderModel";
-import Batman from "../../../components/models/Batman";
-import BatMask from "../../../components/models/BatMask";
+// import BatMask from "../../../components/models/BatMask";
 import AboutDetails from "../../../components/about";
+import dynamic from "next/dynamic";
+
+const BatMask = dynamic(
+  () => import("../../../components/models/BatMask"),
+  { ssr: false }
+);
 
 export default function Projects() {
   return (
     <>
       <Image
+        priority
+        sizes="100vw"
         src={bg}
         alt="bg-image"
         className="-z-50 fixed top-0 left-0 w-full h-full object-cover object-center opacity-50"

@@ -1,14 +1,22 @@
 import Image from "next/image";
 import bg from "../../public/background/home-background-bt.png";
 import RenderModel from "../components/RenderModel";
-import BatLogo from "../components/models/BatLogo";
+// import BatLogo from "../components/models/BatLogo";
 import Navigation from "../components/navigation";
 import RainBackground from "../components/RainBackground";
+import dynamic from "next/dynamic";
+
+const BatLogo = dynamic(
+  () => import("../components/models/BatLogo"),
+  { ssr: false }
+);
 
 export default function Home() {
   return (
     <main className="flex min-h-screen flex-col items-center justify-between relative">
       <Image
+        priority
+        sizes="100vw"
         src={bg}
         alt="bg-image"
         fill
