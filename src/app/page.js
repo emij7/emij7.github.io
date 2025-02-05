@@ -25,6 +25,11 @@ export default function Home() {
       <div className="w-full h-screen">
         {/* nav and 3dmodels */}
         <Navigation />
+        <div className="absolute left-1/2 -translate-x-1/2 -translate-y-1/2 text-center pt-20 -z-20">
+          <p className="text-foreground font-light text-2xl">
+            Ignacio Emiliano Juarez
+          </p>
+        </div>
         <RenderModel>
           <BatLogo />
         </RenderModel>
