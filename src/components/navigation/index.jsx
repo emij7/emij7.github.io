@@ -28,7 +28,9 @@ const Navigation = () => {
     <div
       className={
         "w-full fixed h-screen flex justify-center" +
-        (isSmall ? " items-end pb-10" : " items-center")
+        (isSmall
+          ? " items-end bottom-3/4"
+          : " items-center")
       }
     >
       <ResponsiveComponent>
