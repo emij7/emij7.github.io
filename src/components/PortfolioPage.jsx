@@ -23,6 +23,7 @@ import homeBackground from "../../public/background/home-background-bt.png";
 import projectsBackground from "../../public/background/projects-background.png";
 import { primaryStack, siteLinks, stackGroups } from "../content/portfolio";
 import HeroVisual from "./HeroVisual";
+import LocaleDocumentLanguage from "./LocaleDocumentLanguage";
 import ProjectVisual from "./ProjectVisual";
 import RainBackground from "./RainBackground";
 import Reveal from "./Reveal";
@@ -55,6 +56,7 @@ export default function PortfolioPage({ content }) {
 
   return (
     <div className="site-shell">
+      <LocaleDocumentLanguage locale={locale} />
       <a className="skip-link" href="#main-content">
         {locale === "es" ? "Saltar al contenido" : "Skip to content"}
       </a>
@@ -227,7 +229,9 @@ export default function PortfolioPage({ content }) {
                         </a>
                         <span>
                           <ShieldCheck aria-hidden="true" />
-                          {content.projects.privateCode}
+                          {project.codePrivacy === "source"
+                            ? content.projects.privateSourceCode
+                            : content.projects.privateCompanyCode}
                         </span>
                       </div>
                     </div>
@@ -257,7 +261,7 @@ export default function PortfolioPage({ content }) {
                     </div>
                     <p className="confidential-label">
                       <ShieldCheck aria-hidden="true" />
-                      {content.projects.privateCode}
+                      {content.projects.privateCompanyCode}
                     </p>
                     <h4>{project.name}</h4>
                     <p>{project.description}</p>

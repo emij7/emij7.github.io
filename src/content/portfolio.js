@@ -138,7 +138,8 @@ export const portfolioContent = {
       intro:
         "A selection of public products and anonymized client work. Company-owned source code remains private.",
       visit: "Visit live site",
-      privateCode: "Private company code",
+      privateCompanyCode: "Private company code",
+      privateSourceCode: "Private source code",
       production: "In production",
       featured: [
         {
@@ -173,6 +174,7 @@ export const portfolioContent = {
             "Vercel deployment and production maintenance",
           ],
           stack: ["React", "Firebase", "Vercel"],
+          codePrivacy: "source",
           visual: ["Apply", "Validate", "Store", "Review"],
           variant: "workflow",
         },
@@ -185,6 +187,7 @@ export const portfolioContent = {
             "Development and ongoing maintenance of the institution’s public website and content experience.",
           details: ["Public-facing website", "Firebase services", "Vercel deployment"],
           stack: ["React", "Firebase", "Vercel"],
+          codePrivacy: "source",
           visual: ["Content", "Community", "Information"],
           variant: "website",
         },
@@ -339,7 +342,8 @@ export const portfolioContent = {
       intro:
         "Una selección de productos públicos y trabajo profesional anonimizado. El código empresarial permanece privado.",
       visit: "Visitar sitio",
-      privateCode: "Código empresarial privado",
+      privateCompanyCode: "Código empresarial privado",
+      privateSourceCode: "Código fuente privado",
       production: "En producción",
       featured: [
         {
@@ -374,6 +378,7 @@ export const portfolioContent = {
             "Deployment en Vercel y mantenimiento productivo",
           ],
           stack: ["React", "Firebase", "Vercel"],
+          codePrivacy: "source",
           visual: ["Inscribir", "Validar", "Guardar", "Revisar"],
           variant: "workflow",
         },
@@ -386,6 +391,7 @@ export const portfolioContent = {
             "Desarrollo y mantenimiento continuo del sitio público y la experiencia de contenidos de la institución.",
           details: ["Sitio web público", "Servicios Firebase", "Deployment en Vercel"],
           stack: ["React", "Firebase", "Vercel"],
+          codePrivacy: "source",
           visual: ["Contenido", "Comunidad", "Información"],
           variant: "website",
         },
