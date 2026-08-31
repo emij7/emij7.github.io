@@ -1,6 +1,7 @@
 const nextConfig = {
-  output: "export", // <=== enables static exports
+  output: "export",
   reactStrictMode: true,
+  trailingSlash: true,
   images: {
     unoptimized: true,
   },

@@ -6,20 +6,42 @@ Source: https://sketchfab.com/3d-models/batman-1989-logo-b15d3d63097946959dd4ba7
 Title: Batman 1989 Logo
 */
 "use client";
-import React, { useRef } from "react";
+import React, { useMemo, useRef } from "react";
 import { useGLTF } from "@react-three/drei";
 import { useFrame } from "@react-three/fiber";
 
-export default function BatLogo(props) {
+export default function BatLogo({ reduceMotion = false, ...props }) {
   const { nodes, materials } = useGLTF(
-    "/models/bat-logo-transformed.glb"
+    "/models/bat-logo-transformed.glb",
+    "/draco/",
   );
 
   const modelRef = useRef();
+  const presentationMaterials = useMemo(() => {
+    const badge = materials.Badge1.clone();
+    badge.color.set("#f4dc24");
+    badge.emissive.set("#4b4304");
+    badge.emissiveIntensity = 0.28;
 
-  useFrame((state, delta, xrFrame) => {
-    modelRef.current.position.y =
-      -1.1 + Math.sin(state.clock.elapsedTime) * 0.1;
+    const ring = materials["In-Edge"].clone();
+    ring.color.set("#0b0d0f");
+    ring.metalness = 0.75;
+    ring.roughness = 0.3;
+
+    const bat = materials.Badge.clone();
+    bat.color.set("#090b0d");
+    bat.metalness = 0.45;
+    bat.roughness = 0.42;
+
+    return { badge, ring, bat };
+  }, [materials]);
+
+  useFrame((state) => {
+    if (!modelRef.current || reduceMotion) return;
+
+    modelRef.current.position.y = -0.32 + Math.sin(state.clock.elapsedTime * 0.85) * 0.09;
+    modelRef.current.rotation.y =
+      -0.2 + Math.sin(state.clock.elapsedTime * 0.35) * 0.08;
   });
 
   return (
@@ -27,8 +49,8 @@ export default function BatLogo(props) {
       {...props}
       dispose={null}
       ref={modelRef}
-      position={[-0.1, -4, 0]}
-      scale={[0.33, 0.33, 0.33]}
+      position={[-0.1, -0.32, 0]}
+      scale={[0.3, 0.3, 0.3]}
       rotation={[0.2, -0.2, 0]}
     >
       <mesh
@@ -36,7 +58,7 @@ export default function BatLogo(props) {
         castShadow
         receiveShadow
         geometry={nodes.Badge_0.geometry}
-        material={materials.Badge1}
+        material={presentationMaterials.badge}
         position={[0, 3.003, 0]}
       />
       <mesh
@@ -44,7 +66,7 @@ export default function BatLogo(props) {
         castShadow
         receiveShadow
         geometry={nodes.InnerRing_0.geometry}
-        material={materials["In-Edge"]}
+        material={presentationMaterials.ring}
         position={[0, 3.003, 0]}
         scale={0.969}
       />
@@ -53,11 +75,11 @@ export default function BatLogo(props) {
         castShadow
         receiveShadow
         geometry={nodes.BatLogo_0.geometry}
-        material={materials.Badge}
+        material={presentationMaterials.bat}
         position={[0, 3.003, 0]}
       />
     </group>
   );
 }
 
-useGLTF.preload("/models/bat-logo-transformed.glb");
+useGLTF.preload("/models/bat-logo-transformed.glb", "/draco/");

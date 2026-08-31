@@ -1,43 +1,24 @@
-"use client";
-
-import React from "react";
-import { useEffect } from "react";
-import { useState } from "react";
-
-const createRain = () => ({
-  id: Math.random(),
-  top: `${Math.random() * 100}%`,
-  left: `${Math.random() * 100}%`,
-  animationDuration: `${Math.random() * 20 + 1}s`,
-});
+const drops = Array.from({ length: 42 }, (_, index) => ({
+  left: `${(index * 37 + 11) % 104}%`,
+  delay: `${-((index * 0.43) % 4.8)}s`,
+  duration: `${1.15 + (index % 8) * 0.16}s`,
+  opacity: 0.2 + (index % 5) * 0.08,
+  length: `${18 + (index % 6) * 5}px`,
+}));
 
 const RainBackground = () => {
-  const [rain, setRain] = useState([]);
-
-  useEffect(() => {
-    const addRandomRain = () => {
-      const newDrops = Array.from({ length: 45 }).map(
-        createRain
-      );
-      setRain((prevRain) => [...newDrops]);
-    };
-
-    const interval = setInterval(addRandomRain, 300);
-
-    return () => clearInterval(interval);
-  }, []);
   return (
-    <div className="fixed top-0 left-0 w-full h-full -z-20 overflow-hidden">
-      {rain.map((drop) => (
-        <div
-          key={drop.id}
-          className="absolute h-4 bg-slate-600"
+    <div className="rain-background" aria-hidden="true">
+      {drops.map((drop, index) => (
+        <span
+          className="rain-drop"
+          key={index}
           style={{
-            width: "1px",
-            top: drop.top,
-            left: drop.left,
-            transform: `rotate(30deg)`,
-            animation: `rainMove ${drop.animationDuration}s linear infinite`,
+            "--rain-left": drop.left,
+            "--rain-delay": drop.delay,
+            "--rain-duration": drop.duration,
+            "--rain-opacity": drop.opacity,
+            "--rain-length": drop.length,
           }}
         />
       ))}
