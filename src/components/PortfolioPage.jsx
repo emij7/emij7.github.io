@@ -23,7 +23,6 @@ import homeBackground from "../../public/background/home-background-bt.png";
 import projectsBackground from "../../public/background/projects-background.png";
 import { primaryStack, siteLinks, stackGroups } from "../content/portfolio";
 import HeroVisual from "./HeroVisual";
-import LocaleDocumentLanguage from "./LocaleDocumentLanguage";
 import ProjectVisual from "./ProjectVisual";
 import RainBackground from "./RainBackground";
 import Reveal from "./Reveal";
@@ -56,7 +55,6 @@ export default function PortfolioPage({ content }) {
 
   return (
     <div className="site-shell">
-      <LocaleDocumentLanguage locale={locale} />
       <a className="skip-link" href="#main-content">
         {locale === "es" ? "Saltar al contenido" : "Skip to content"}
       </a>

@@ -1,6 +1,6 @@
 import { Inter } from "next/font/google";
 import "./globals.css";
-import Sound from "../components/Sound";
+import DocumentShell from "../components/DocumentShell";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -79,11 +79,6 @@ export const viewport = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className={inter.variable}>
-      <body>
-        {children}
-        <Sound />
-      </body>
-    </html>
+    <DocumentShell fontVariable={inter.variable}>{children}</DocumentShell>
   );
 }

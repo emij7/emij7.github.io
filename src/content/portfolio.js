@@ -230,7 +230,7 @@ export const portfolioContent = {
       paragraphs: [
         "I’m a Software Engineer and Full Stack Developer from Argentina focused on building web and mobile applications.",
         "I enjoy taking ownership of projects and features from initial requirements through production. My day-to-day work regularly includes backend services, databases, integrations, deployments and production troubleshooting.",
-        "I have previously coordinated development teams and contributed to technical and architecture decisions. AI-assisted development tools are part of my daily workflow for implementation, debugging, analysis and problem solving.",
+        "I have previously coordinated development teams and contributed to technical and architecture decisions.",
       ],
       ownership: "From requirements to production",
       cycle: [
@@ -434,7 +434,7 @@ export const portfolioContent = {
       paragraphs: [
         "Soy Software Engineer y Full Stack Developer de Argentina, enfocado en construir aplicaciones web y mobile.",
         "Disfruto tomar ownership de proyectos y funcionalidades desde los requerimientos iniciales hasta producción. Mi trabajo cotidiano incluye servicios backend, bases de datos, integraciones, deployments y resolución de problemas productivos.",
-        "Anteriormente coordiné equipos de desarrollo y participé en decisiones técnicas y de arquitectura. Las herramientas de desarrollo asistido por IA son parte de mi flujo diario para implementación, debugging, análisis y resolución de problemas.",
+        "Anteriormente coordiné equipos de desarrollo y participé en decisiones técnicas y de arquitectura.",
       ],
       ownership: "De requerimientos a producción",
       cycle: [
